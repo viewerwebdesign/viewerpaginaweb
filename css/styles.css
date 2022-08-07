@@ -70,6 +70,12 @@
   box-sizing: border-box;
 }
 
+header .container .row h1{
+  text-shadow: white 1px 1px 15px;
+  position: static;
+  color: #055160;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -4713,6 +4719,7 @@ header img{
   position: relative;
   width: 100%;
   overflow: hidden;
+  box-shadow: #000 1px 1px 15px;
 }
 .carousel-inner::after {
   display: block;
@@ -10024,6 +10031,8 @@ html {
   color: rgba(255, 255, 255, 0.7);
 }
 
+/*flecha de inicio*/
+
 .scroll-to-top {
   position: fixed;
   right: 15px;
@@ -10033,14 +10042,14 @@ html {
   height: 50px;
   text-align: center;
   color: #fff;
-  background: rgba(52, 58, 64, 0.5);
+  background: rgba(0, 128, 255, 0.452);
   line-height: 50px;
 }
 .scroll-to-top:focus, .scroll-to-top:hover {
   color: #fff;
 }
 .scroll-to-top:hover {
-  background: #343a40;
+  background: #2b5e91;
 }
 .scroll-to-top i {
   font-weight: 800;
@@ -10054,7 +10063,7 @@ html {
   height: 100%;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: #4B4A54;
+  background: #232336;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -10193,13 +10202,14 @@ footer.footer .social-link:hover {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background-color: #000 ;
-  /*background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, 
+  
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, 
                                      rgba(255, 255, 255, 0.1) 100%), 
-                                     url("../assets/img/2.svg");*/
+                                     url("../assets/img/2\(1\).png");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-color: #000 ;
 }
 .masthead h1, .masthead .h1 {
   font-size: 4rem;
@@ -10281,30 +10291,127 @@ footer.footer .social-link:hover {
   }
 }
 
+@media (min-width: 320px) and (max-width: 575px) {
+  .carousel-inner{
+    background-color: orange;
+  }
+  footer{
+    background-color: #8c8c8c;
+    box-sizing: border-box;
+   
+  }
+  
+  footer h2{
+    color: white;
+    font-size: 3em;
+    
+  }
+  .container-contacto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .social-media{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+  }
+  .contacto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    margin: 10px;
+  }
+  .contacto i, h6{
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  }
+  @media (min-width: 576px) and (max-width: 767px) {
+    .carousel-inner{
+      background-color: orange;
+    }
+    footer{
+      background-color: #8c8c8c;
+      box-sizing: border-box;
+     
+    }
+    
+    footer h2{
+      color: white;
+      font-size: 3em;
+    }
+    .container-contacto{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 100%;
+    }
+    .social-media{
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      
+    }
+    .contacto{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items:center;
+      margin: 10px;
+    }
+    .contacto i, h6{
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+    
+    
+    
+    
+    
+    }
+
+
+
 @media (min-width: 992px){
 .carousel-inner{
   background-color: orange;
 }
 footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #8c8c8c;
   box-sizing: border-box;
+  text-align: center;
  
 }
 
 footer h2{
   color: white;
   font-size: 3em;
+  text-align: center;
 }
 .container-contacto{
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   max-width: 100%;
 }
 .social-media{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: row;
+  padding-right: 3%;
   
 }
 .contacto{
@@ -10317,10 +10424,118 @@ footer h2{
 .contacto i, h6{
   color: rgb(255, 255, 255);
   text-align: center;
+  font-size: 0.8em;
 }
 
+}
+@media (min-width: 1024px){
+  .carousel-inner{
+    background-color: orange;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #8c8c8c;
+    box-sizing: border-box;
+    text-align: center;
+   
+  }
+  
+  footer h2{
+    color: white;
+    font-size: 3em;
+    text-align: center;
+  }
+  .container-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .social-media{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-right: 3%;
+    
+  }
+  
+  .contacto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    margin: 10px;
+  }
+  .contacto i, h6{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 0.8em;
+  }
+  
+  footer .contenedor-copyright p{
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 3%;
+    padding-top: 3%;
+} 
+}
 
-
-
-
+@media (min-width: 1200px){
+  .carousel-inner{
+    background-color: orange;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #8c8c8c;
+    box-sizing: border-box;
+    text-align: center;
+   
+  }
+  
+  footer h2{
+    color: white;
+    font-size: 3em;
+    text-align: center;
+  }
+  .container-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .social-media{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-right: 3%;
+    
+  }
+  
+  .contacto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    margin: 10px;
+  }
+  .contacto i, h6{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 0.8em;
+  }
+  
+  footer .contenedor-copyright p{
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 3%;
+    padding-top: 3%;
+} 
 }
